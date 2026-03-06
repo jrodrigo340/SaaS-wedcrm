@@ -1,7 +1,7 @@
 package com.wedcrm.controller;
 
 import com.wedcrm.entity.Customer;
-import com.wedcrm.service.impl.CustomerService;
+import com.wedcrm.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

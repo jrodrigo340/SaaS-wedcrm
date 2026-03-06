@@ -1,4 +1,4 @@
-package com.wedcrm.service.impl;
+package com.wedcrm.service;
 
 import com.wedcrm.entity.User;
 import com.wedcrm.repository.UserRepository;
