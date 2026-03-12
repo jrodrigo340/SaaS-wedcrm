@@ -1,23 +1,19 @@
 package com.wedcrm.entity;
 
-import com.wedcrm.enums.UserRole;
+import com.wedcrm.enums.Role;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
-@Getter
-@Setter
 @Entity
 @Table(name = "users")
+public class User extends AbstractEntity {
 
-public class User extends AbstractEntity{
-
-    @Column(nullable = false)
+    @Column(nullable = false, length = 150)
     private String name;
 
-    @Column(nullable = false,  unique = true)
+    @Column(nullable = false, unique = true)
     private String email;
 
     @Column(nullable = false)
@@ -25,7 +21,25 @@ public class User extends AbstractEntity{
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private UserRole role;
+    private Role role;
+
+    @Column(length = 20)
+    private String phone;
+
+    private String avatarUrl;
 
     private LocalDateTime lastLogin;
+
+    @Column(length = 500)
+    private String refreshToken;
+
+    @Column(nullable = false)
+    private Boolean emailVerified = false;
+
+    @OneToMany(mappedBy = "assignedTo")
+    private List<Customer> customers;
+
+    @OneToMany(mappedBy = "assignedTo")
+    private List<Activity> activities;
+
 }

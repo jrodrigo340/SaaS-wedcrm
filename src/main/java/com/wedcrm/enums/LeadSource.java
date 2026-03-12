@@ -2,10 +2,12 @@ package com.wedcrm.enums;
 
 public enum LeadSource {
 
-    INSTAGRAM,
-    FACEBOOK,
     WEBSITE,
-    GOOGLE,
     REFERRAL,
+    SOCIAL_MEDIA,
+    EMAIL,
+    COLD_CALL,
+    EVENT,
     OTHER
+
 }

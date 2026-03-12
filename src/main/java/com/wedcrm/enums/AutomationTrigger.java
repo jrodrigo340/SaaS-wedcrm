@@ -1,0 +1,13 @@
+package com.wedcrm.enums;
+
+public enum AutomationTrigger {
+
+    CUSTOMER_CREATED,
+    CUSTOMER_BIRTHDAY,
+    OPPORTUNITY_STAGE_CHANGED,
+    OPPORTUNITY_CREATED,
+    OPPORTUNITY_STAGNANT,
+    ACTIVITY_OVERDUE,
+    MANUAL
+
+}

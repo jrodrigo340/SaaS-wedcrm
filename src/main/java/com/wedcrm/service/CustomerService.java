@@ -1,23 +1,40 @@
 package com.wedcrm.service;
 
+import com.wedcrm.dto.customer.*;
 import com.wedcrm.entity.Customer;
-import com.wedcrm.repository.CustomerRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
+import java.util.UUID;
 
-@Service
-public class CustomerService {
+public interface CustomerService {
 
-    @Autowired
-    private CustomerRepository repository;
+    Customer createCustomer(CustomerRequest request);
 
-    public Customer save(Customer customer){
-        return repository.save(customer);
-    }
+    Customer updateCustomer(UUID id, CustomerRequest request);
 
-    public List<Customer> findAll(){
-        return repository.findAll();
-    }
+    Customer getCustomerById(UUID id);
+
+    Page<Customer> listCustomers(CustomerFilter filter, Pageable pageable);
+
+    void deleteCustomer(UUID id);
+
+    void assignCustomer(UUID customerId, UUID userId);
+
+    void addTag(UUID customerId, UUID tagId);
+
+    void removeTag(UUID customerId, UUID tagId);
+
+    void recalculateScore(UUID customerId);
+
+    List<Customer> findInactiveCustomers(int days);
+
+    ImportResult importCustomers(MultipartFile csv);
+
+    byte[] exportCustomers(CustomerFilter filter);
+
+    CustomerTimelineResponse getCustomerTimeline(UUID id);
 }

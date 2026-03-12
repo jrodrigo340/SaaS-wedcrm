@@ -1,7 +1,8 @@
 package com.wedcrm.controller;
 
+import com.wedcrm.dto.request.UserRequestDTO;
+import com.wedcrm.dto.response.UserResponseDTO;
 import com.wedcrm.entity.User;
-import com.wedcrm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,8 +16,12 @@ public class UserController {
     private UserService service;
 
     @PostMapping
-    public User create(@RequestBody User user){
-        return service.save(user);
+    public UserResponseDTO create(@RequestBody UserRequestDTO dto) {
+
+        User user = mapper.toEntity(dto);
+        User savedUser = service.save(user);
+
+        return mapper.toDTO(savedUser);
     }
 
     @GetMapping

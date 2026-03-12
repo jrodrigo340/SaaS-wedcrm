@@ -52,4 +52,3 @@ CREATE TABLE customer_users (
                                 CONSTRAINT fk_customer_users_customer
                                     FOREIGN KEY (customer_id) REFERENCES customers(id)
 );
-);
