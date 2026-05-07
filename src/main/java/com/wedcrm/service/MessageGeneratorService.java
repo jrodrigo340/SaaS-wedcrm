@@ -1,5 +1,9 @@
 package com.wedcrm.service;
 
+import com.wedcrm.dto.Assistants.PreviewMessageDTO;
+import com.wedcrm.enums.AutomationTrigger;
+import com.wedcrm.enums.MessageChannel;
+
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -11,9 +15,9 @@ public interface MessageGeneratorService {
 
     void processAutomationTrigger(AutomationTrigger trigger, UUID customerId);
 
-    String resolveVariables(String template, Customer customer);
+    String resolveVariables(String template, com.wedcrm.entity.Customer customer);
 
-    void scheduleMessage(UUID customerId, UUID templateId, LocalDateTime dateTime);
+    void scheduleMessage(UUID customerId, UUID templateId, LocalDateTime scheduledTime);
 
     void processScheduledMessages();
 
@@ -21,6 +25,5 @@ public interface MessageGeneratorService {
 
     void sendReengagementMessages();
 
-    String previewMessage(UUID templateId, UUID customerId);
-
+    PreviewMessageDTO previewMessage(UUID templateId, UUID customerId);
 }

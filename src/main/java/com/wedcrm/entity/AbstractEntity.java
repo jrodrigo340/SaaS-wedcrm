@@ -1,46 +1,47 @@
 package com.wedcrm.entity;
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.GenericGenerator;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
 public abstract class AbstractEntity {
 
     @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(
-            name = "UUID",
-            strategy = "org.hibernate.id.UUIDGenerator"
-    )
-    @Column(nullable = false, updatable = false)
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(columnDefinition = "UUID", nullable = false, updatable = false)
     private UUID id;
 
-    @Column(nullable = false, updatable = false)
+    @CreatedDate
+    @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
+    @LastModifiedDate
+    @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
+    @CreatedBy
+    @Column(name = "created_by", updatable = false, length = 100)
     private String createdBy;
 
+    @LastModifiedBy
+    @Column(name = "updated_by", length = 100)
     private String updatedBy;
 
     @Column(nullable = false)
     private Boolean active = true;
 
-    @PrePersist
-    protected void onCreate() {
-        this.createdAt = LocalDateTime.now();
+    public AbstractEntity() {
     }
 
-    @PreUpdate
-    protected void onUpdate() {
-        this.updatedAt = LocalDateTime.now();
-    }
-
-    // getters e setters
+    // ========== GETTERS E SETTERS ==========
 
     public UUID getId() {
         return id;
@@ -62,16 +63,8 @@ public abstract class AbstractEntity {
         return createdBy;
     }
 
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
     public String getUpdatedBy() {
         return updatedBy;
-    }
-
-    public void setUpdatedBy(String updatedBy) {
-        this.updatedBy = updatedBy;
     }
 
     public Boolean getActive() {
@@ -80,5 +73,37 @@ public abstract class AbstractEntity {
 
     public void setActive(Boolean active) {
         this.active = active;
+    }
+
+    // ========== MÉTODOS DE NEGÓCIO ==========
+
+    public void deactivate() {
+        this.active = false;
+    }
+
+    public void activate() {
+        this.active = true;
+    }
+
+    public boolean isActive() {
+        return Boolean.TRUE.equals(active);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof AbstractEntity that)) return false;
+        return id != null && id.equals(that.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s{id=%s, active=%s}",
+                getClass().getSimpleName(), id, active);
     }
 }

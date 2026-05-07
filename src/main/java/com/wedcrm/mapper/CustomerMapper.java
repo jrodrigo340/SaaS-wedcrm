@@ -1,33 +1,32 @@
 package com.wedcrm.mapper;
 
 import com.wedcrm.dto.request.CustomerRequestDTO;
-import com.wedcrm.dto.response.CustomerResponseDTO;
+import com.wedcrm.dto.response.CustomerResponse;
+import com.wedcrm.dto.response.CustomerSummaryResponse;
 import com.wedcrm.entity.Customer;
-import org.springframework.stereotype.Component;
 
-@Component
-public class CustomerMapper {
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.MappingTarget;
 
-    public Customer toEntity(CustomerRequestDTO dto) {
-        Customer customer = new Customer();
+@Mapper(
+        componentModel = "spring",
+        uses = {UserMapper.class, TagMapper.class}
+)
+public interface CustomerMapper {
 
-        customer.setName(dto.getName());
-        customer.setEmail(dto.getEmail());
-        customer.setSource(dto.getSource());
-        customer.setNotes(dto.getNotes());
+    // ENTITY → RESPONSE
+    @Mapping(source = "assignedTo.id", target = "assignedToId")
+    CustomerResponse toResponse(Customer customer);
 
-        return customer;
-    }
+    // ENTITY → SUMMARY
+    @Mapping(source = "assignedTo.id", target = "assignedToId")
+    CustomerSummaryResponse toSummary(Customer customer);
 
-    public CustomerResponseDTO toDto(Customer customer) {
-        CustomerResponseDTO dto = new CustomerResponseDTO();
+    // REQUEST → ENTITY
+    Customer toEntity(CustomerRequestDTO request);
 
-        dto.setId(customer.getId());
-        dto.setName(customer.getName());
-        dto.setEmail(customer.getEmail());
-        dto.setSource(customer.getSource());
-        dto.setNotes(customer.getNotes());
-
-        return dto;
-    }
+    // UPDATE
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    void updateEntity(CustomerRequestDTO request, @MappingTarget Customer customer);
 }

@@ -1,14 +1,16 @@
 package com.wedcrm.dto.request;
 
-import com.wedcrm.enums.UserRole;
-import lombok.Setter;
-import lombok.Getter;
+import com.wedcrm.enums.Role;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.Builder;
 
-@Getter
-@Setter
-public class UserRequestDTO {
-    private String name;
-    private String email;
-    private String password;
-    private UserRole role;
-}
+@Builder
+public record UserRequestDTO(
+        @NotBlank String name,
+        @NotBlank @Email String email,
+        String password,
+        @NotNull Role role,
+        String phone
+) {}

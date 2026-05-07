@@ -1,13 +1,22 @@
 package com.wedcrm.enums;
 
 public enum LeadSource {
+    WEBSITE("Website"),
+    REFERRAL("Indicação"),
+    SOCIAL_MEDIA("Rede Social"),
+    EMAIL_CAMPAIGN("Campanha de E-mail"),
+    COLD_CALL("Ligação Ativa"),
+    EVENT("Evento/Feira"),
+    PARTNER("Parceiro"),
+    OTHER("Outro");
 
-    WEBSITE,
-    REFERRAL,
-    SOCIAL_MEDIA,
-    EMAIL,
-    COLD_CALL,
-    EVENT,
-    OTHER
+    private final String description;
 
+    LeadSource(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }

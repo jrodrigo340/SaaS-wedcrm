@@ -1,8 +1,12 @@
 package com.wedcrm.service;
 
-import com.wedcrm.dto.customer.*;
-import com.wedcrm.entity.Customer;
-
+import com.wedcrm.dto.Assistants.ImportResultDTO;
+import com.wedcrm.dto.response.CustomerResponse;
+import com.wedcrm.dto.response.CustomerSummaryResponse;
+import com.wedcrm.dto.request.CustomerFilterDTO;
+import com.wedcrm.dto.Assistants.TimelineEventDTO;
+import com.wedcrm.dto.request.CustomerRequestDTO;
+import com.wedcrm.dto.response.CustomerResponse;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.multipart.MultipartFile;
@@ -11,30 +15,29 @@ import java.util.List;
 import java.util.UUID;
 
 public interface CustomerService {
+    CustomerResponse updateCustomer(UUID id, CustomerRequestDTO request);
 
-    Customer createCustomer(CustomerRequest request);
+    CustomerResponse createCustomer(CustomerRequestDTO request);
 
-    Customer updateCustomer(UUID id, CustomerRequest request);
+    CustomerResponse getCustomerById(UUID id);
 
-    Customer getCustomerById(UUID id);
-
-    Page<Customer> listCustomers(CustomerFilter filter, Pageable pageable);
+    Page<CustomerSummaryResponse> listCustomers(CustomerFilterDTO filter, Pageable pageable);
 
     void deleteCustomer(UUID id);
 
-    void assignCustomer(UUID customerId, UUID userId);
+    CustomerResponse assignCustomer(UUID customerId, UUID userId);
 
-    void addTag(UUID customerId, UUID tagId);
+    CustomerResponse addTag(UUID customerId, UUID tagId);
 
-    void removeTag(UUID customerId, UUID tagId);
+    CustomerResponse removeTag(UUID customerId, UUID tagId);
 
-    void recalculateScore(UUID customerId);
+    CustomerResponse recalculateScore(UUID customerId);
 
-    List<Customer> findInactiveCustomers(int days);
+    List<CustomerSummaryResponse> findInactiveCustomers(int days);
 
-    ImportResult importCustomers(MultipartFile csv);
+    ImportResultDTO importCustomers(MultipartFile csvFile);
 
-    byte[] exportCustomers(CustomerFilter filter);
+    byte[] exportCustomers(CustomerFilterDTO filter);
 
-    CustomerTimelineResponse getCustomerTimeline(UUID id);
+    List<TimelineEventDTO> getCustomerTimeline(UUID id);
 }

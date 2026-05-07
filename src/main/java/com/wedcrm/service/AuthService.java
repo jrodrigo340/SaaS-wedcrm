@@ -4,18 +4,19 @@ import com.wedcrm.dto.auth.*;
 
 public interface AuthService {
 
-    AuthResponse login(LoginRequest request);
+    LoginResponseDTO login(LoginRequestDTO request);
 
-    void register(RegisterRequest request);
+    UserInfoDTO register(RegisterRequestDTO request);
 
-    TokenResponse refreshToken(String refreshToken);
+    TokenResponseDTO refreshToken(RefreshTokenRequestDTO request);
 
     void logout(String userId);
 
-    void forgotPassword(String email);
+    void forgotPassword(ForgotPasswordRequestDTO request);
 
-    void resetPassword(ResetPasswordRequest request);
+    void resetPassword(ResetPasswordRequestDTO request);
 
     void verifyEmail(String token);
 
+    UserInfoDTO getCurrentUser(String email);
 }

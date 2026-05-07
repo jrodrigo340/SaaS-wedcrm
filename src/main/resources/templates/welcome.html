@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bem-vindo</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; line-height:1.6;">
+
+<h2>Olá, <span th:text="${nome}">Cliente</span>!</h2>
+
+<p>
+    É um prazer ter você como nosso cliente. 🎉
+</p>
+
+<p>
+    Seu consultor dedicado é
+    <strong th:text="${vendedor}">Consultor</strong>
+    e você pode entrar em contato pelo e-mail
+    <strong th:text="${emailVendedor}">email@empresa.com</strong>.
+</p>
+
+<p>
+    Estamos à disposição para ajudá-lo(a) em tudo que precisar.
+    Mal podemos esperar para começar!
+</p>
+
+<br>
+
+<p>
+    Atenciosamente,<br>
+    <strong>Equipe WedCRM</strong>
+</p>
+
+</body>
+</html>

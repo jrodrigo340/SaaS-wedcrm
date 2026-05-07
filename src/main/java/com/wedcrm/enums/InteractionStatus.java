@@ -1,11 +1,19 @@
 package com.wedcrm.enums;
 
 public enum InteractionStatus {
+    SENT("Enviado"),
+    DELIVERED("Entregue"),
+    READ("Lido"),
+    BOUNCED("Devolvido"),
+    FAILED("Falhou");
 
-    SENT,
-    DELIVERED,
-    READ,
-    BOUNCED,
-    FAILED
+    private final String description;
 
+    InteractionStatus(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }

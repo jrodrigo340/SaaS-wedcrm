@@ -1,30 +1,48 @@
 package com.wedcrm.service;
 
-import com.wedcrm.dto.opportunity.*;
-import com.wedcrm.entity.Opportunity;
+import com.wedcrm.dto.*;
+import com.wedcrm.dto.Assistants.DateRangeDTO;
+import com.wedcrm.dto.Assistants.KanbanBoardDTO;
+import com.wedcrm.dto.Assistants.PipelineMetricsDTO;
+import com.wedcrm.dto.filter.OpportunityFilterDTO;
+import com.wedcrm.dto.request.CloseRequestDTO;
+import com.wedcrm.dto.request.LostRequestDTO;
+import com.wedcrm.dto.request.OpportunityProductRequestDTO;
+import com.wedcrm.dto.request.OpportunityRequestDTO;
+import com.wedcrm.dto.response.OpportunityProductResponseDTO;
+import com.wedcrm.dto.response.OpportunityResponseDTO;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 public interface OpportunityService {
 
-    Opportunity createOpportunity(OpportunityRequest request);
+    OpportunityResponseDTO createOpportunity(OpportunityRequestDTO request);
 
-    Opportunity updateOpportunity(UUID id, OpportunityRequest request);
+    OpportunityResponseDTO updateOpportunity(UUID id, OpportunityRequestDTO request);
 
-    void moveStage(UUID id, UUID newStageId);
+    OpportunityResponseDTO getOpportunityById(UUID id);
 
-    void closeAsWon(UUID id, CloseRequest request);
+    Page<OpportunityResponseDTO> listOpportunities(OpportunityFilterDTO filter, Pageable pageable);
 
-    void closeAsLost(UUID id, LostRequest request);
+    void deleteOpportunity(UUID id);
 
-    void addProduct(UUID oppId, ProductRequest request);
+    OpportunityResponseDTO moveStage(UUID id, UUID newStageId);
+
+    OpportunityResponseDTO closeAsWon(UUID id, CloseRequestDTO request);
+
+    OpportunityResponseDTO closeAsLost(UUID id, LostRequestDTO request);
+
+    OpportunityProductResponseDTO addProduct(UUID oppId, OpportunityProductRequestDTO request);
 
     void removeProduct(UUID oppId, UUID productId);
 
-    PipelineKanbanResponse getPipelineKanban(UUID userId);
+    KanbanBoardDTO getPipelineKanban(UUID userId);
 
-    PipelineMetricsResponse getPipelineMetrics(DateRange range);
+    PipelineMetricsDTO getPipelineMetrics(DateRangeDTO dateRange);
 
-    List<Opportunity> getOverdueOpportunities(UUID userId);
+    List<OpportunityResponseDTO> getOverdueOpportunities(UUID userId);
 }
