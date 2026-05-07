@@ -1,25 +1,206 @@
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/config/SecurityConfig.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/repository/UserRepository.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/entity/AbstractEntity.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/exception/GlobalExceptionHandler.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/service/UserService.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/mapper/UserMapper.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/entity/CustomerUser.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/dto/request/UserRequestDTO.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/mapper/CustomerMapper.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/dto/response/UserResponseDTO.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/dto/response/CustomerResponseDTO.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/service/impl/CustomerServiceImpl.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/repository/CustomerRepository.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/service/impl/UserServiceImpl.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/controller/CustomerController.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/enums/UserRole.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/controller/UserController.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/entity/User.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/exception/ResourceNotFoundException.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/exception/ApiError.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/service/CustomerService.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/enums/LeadSource.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/entity/Customer.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/WedcrmApplication.java
-/home/digo/Área de trabalho/Repositorios/SaaS-wedcrm/src/main/java/com/wedcrm/dto/request/CustomerRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\MessageTemplateService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\CalendarDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\TopCustomerDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\response\AutomationRuleResponseDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\AuthService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\scheduler\InactivityCheckJob.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\controller\CustomerController.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\PipelineStageRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\controller\AuthController.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\WebhookServiceImpl.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\WebhookConfigRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\repository\OpportunityProductRepository.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\entity\PipelineStage.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\Priority.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\ActivityDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\filter\MessageTemplateFilterDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\response\ActivityResponseDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\entity\OpportunityProduct.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\response\InteractionResponseDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\dashboard\DashboardSummaryDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\repository\ActivityRepository.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\entity\Interaction.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\NotificationServiceImpl.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\OpportunityStatus.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\ActivityTypeMetricDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\entity\Opportunity.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\controller\ProductController.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\ProductRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\LoginRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\CalendarDayDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\mapper\TagMapper.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\TemplateProcessorService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\ReportType.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\dashboard\UserSummaryDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\controller\InteractionController.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\DateRangeDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\TagRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\mapper\NotificationMapper.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\repository\OpportunityRepository.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\ProductServiceImpl.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\SalesFunnelDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\EmailServiceImpl.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\update\CustomerUpdateRequest.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\repository\NotificationRepository.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\entity\User.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\controller\OpportunityController.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\auth\UserInfoDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\entity\WebhookConfig.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\MessageGeneratorService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\CustomerStatus.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\KanbanBoardDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\OpportunityProductRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\WedcrmApplication.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\MessageGeneratorServiceImpl.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\controller\NotificationController.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\NotificationType.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\security\validation\AddressValidator.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\config\JwtTokenProvider.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\WebhookConfigDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\PipelineStageServiceImpl.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\repository\CustomerRepository.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\ActivityRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\LeadSource.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\mapper\MessageTemplateMapper.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\controller\ReportController.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\mapper\UserMapper.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\dashboard\TagSummaryDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\NotificationService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\controller\MessageTemplateController.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\dashboard\TeamPerformanceDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\automation\event\DealWonEvent.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\RevenueChartDataDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\dashboard\ConversionRateDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\controller\ActivityController.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\filter\InteractionFilterDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\repository\AutomationExecutionRepository.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\NotificationRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\repository\AutomationRuleRepository.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\OpportunityService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\repository\TagRepository.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\repository\UserRepository.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\EmailService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\repository\InteractionRepository.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\controller\AutomationRuleController.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\entity\AbstractEntity.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\config\TemplateDataInitializer.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\filter\UserFilterDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\filter\AutomationRuleFilterDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\WebhookService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\PipelineMetricsDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\UserServiceImpl.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\KanbanColumnDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\PriorityMetricDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\ReportRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\OpportunityServiceImpl.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\ReportService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\entity\Activity.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\ActivityService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\filter\ActivityFilterDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\response\TokenResponseDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\scheduler\CleanNotificationsJob.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\mapper\InteractionMapper.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\UserService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\mapper\OpportunityProductMapper.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\repository\WebhookConfigRepository.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\config\SecurityConfig.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\AutomationRuleServiceImpl.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\controller\DashboardController.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\CustomerServiceImpl.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\KanbanCardDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\ActivityType.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\mapper\ProductMapper.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\entity\Notification.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\mapper\CustomerMapper.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\controller\PipelineStageController.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\response\LoginResponseDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\exception\ApiError.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\InteractionRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\GroupByType.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\response\CustomerResponse.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\CustomerService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\AutomationRuleRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\CloseRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\filter\OpportunityFilterDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\dashboard\NotificationSummaryDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\response\CustomerSummaryResponse.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\ActivityStatus.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\controller\WebhookController.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\entity\Address.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\controller\TagController.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\dashboard\RevenueChartDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\dashboard\OpportunitySummaryDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\scheduler\ScheduledMessageJob.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\InteractionServiceImpl.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\AddressDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\TagServiceImpl.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\TemplateCategory.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\repository\ProductRepository.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\ForgotPasswordRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\response\MessageTemplateResponseDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\repository\PipelineStageRepository.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\response\ProductResponseDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\security\JwtTokenProvider.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\response\UserResponseDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\AutomationRuleService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\CustomerRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\ReportServiceImpl.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\Direction.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\CalendarDayActivityDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\LostRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\SalesFunnelStageDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\TagService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\ResetPasswordRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\repository\MessageTemplateRepository.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\config\AuditingConfig.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\entity\Customer.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\automation\listener\AutomationEventListener.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\exception\GlobalExceptionHandler.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\AddressRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\response\PipelineStageResponseDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\ImportResultDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\scheduler\LeadScoreUpdateJob.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\AuthServiceImpl.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\dashboard\ActivityMetricsDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\response\TagResponseDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\UserRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\PreviewMessageDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\OpportunityRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\scheduler\NotificationCleanupJob.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\UserRole.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\response\NotificationResponseDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\dashboard\ProductSummaryDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\entity\Product.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\entity\AutomationRule.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\RefreshTokenRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\DashboardService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\RegisterRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\controller\UserController.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\DashboardServiceImpl.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\InteractionStatus.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\ActivityServiceImpl.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\util\ApiResponse.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\scheduler\ActivityReminderJob.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\entity\Tag.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\TimelineEventDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\AdressService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\ProductService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\InteractionService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\MessageTemplateRequestDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\security\JwtAuthenticationFilter.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\InteractionType.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\exception\ResourceNotFoundException.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\mapper\PipelineStageMapper.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\scheduler\BirthdayMessageJob.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\Role.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\response\OpportunityResponseDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\RuleExecutionHistoryDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\MessageChannel.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\enums\AutomationTrigger.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\PipelineStageService.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\request\CustomerFilterDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\entity\MessageTemplate.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\response\OpportunityProductResponseDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\response\ReportResponseDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\dto\Assistants\ActivityMetricsDTO.java
+C:\Users\joaor\OneDrive\Desktop\SaaS-wedcrm\src\main\java\com\wedcrm\service\impl\MessageTemplateServiceImpl.java

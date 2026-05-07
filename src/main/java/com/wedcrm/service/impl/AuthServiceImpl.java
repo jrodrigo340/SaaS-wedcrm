@@ -257,4 +257,4 @@ public class AuthServiceImpl implements AuthService {
                 user.getEmailVerified()
         );
     }
-}0
+}
